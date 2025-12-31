@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Maison Fitouri - Boulangerie artisanale à Lyon. Découvrez nos formules petit-déjeuner et déjeuner, pâtisseries orientales et classiques.">
+    <title>Maison Fitouri | Boulangerie Artisanale Lyon</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <div class="logo-placeholder" id="logo-nav"></div>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#formules" class="nav-link">Nos Formules</a></li>
+                <li><a href="#offres" class="nav-link">Offres Spéciales</a></li>
+                <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" id="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="logo-hero" id="logo-hero"></div>
+            <p class="hero-subtitle">Boulangerie Artisanale</p>
+            <p class="hero-tagline">L'authenticité du goût, la passion du fait maison</p>
+        </div>
+        <div class="hero-scroll">
+            <span>Défiler</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Formules Section -->
+    <section class="formules" id="formules">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Formules</span>
+                <h2 class="section-title">Savourez chaque moment</h2>
+                <p class="section-subtitle">Des formules pensées pour vous accompagner du petit-déjeuner au déjeuner</p>
+            </div>
+
+            <!-- Petit-Déjeuner -->
+            <div class="formule-category">
+                <h3 class="category-title">
+                    <span class="category-icon"><i class="fa-solid fa-sun"></i></span>
+                    Formules Petit-Déjeuner
+                </h3>
+                <div class="formules-grid">
+                    <article class="formule-card">
+                        <div class="formule-header">
+                            <h4 class="formule-name">P'tit Déj Express</h4>
+                            <span class="formule-price">2€00</span>
+                        </div>
+                        <ul class="formule-items">
+                            <li>1 café</li>
+                            <li>1 croissant <span class="or">ou</span> pain au chocolat</li>
+                        </ul>
+                        <div class="formule-badge">Rapide</div>
+                    </article>
+
+                    <article class="formule-card featured">
+                        <div class="formule-header">
+                            <h4 class="formule-name">P'tit Déj Vitaminé</h4>
+                            <span class="formule-price">4€00</span>
+                        </div>
+                        <ul class="formule-items">
+                            <li>1 café</li>
+                            <li>1 croissant <span class="or">ou</span> pain au chocolat</li>
+                            <li>1 jus de fruits</li>
+                        </ul>
+                        <div class="formule-badge">Populaire</div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Déjeuner -->
+            <div class="formule-category">
+                <h3 class="category-title">
+                    <span class="category-icon"><i class="fa-solid fa-utensils"></i></span>
+                    Formules Déjeuner
+                </h3>
+                <div class="formules-grid">
+                    <article class="formule-card">
+                        <div class="formule-header">
+                            <h4 class="formule-name">Formule Snacking'</h4>
+                            <span class="formule-price">7€50</span>
+                        </div>
+                        <ul class="formule-items">
+                            <li>1 Pizza <span class="or">ou</span> Quiche <span class="or">ou</span> Fricassé <span
+                                    class="or">ou</span> Batbout...</li>
+                            <li>1 boisson 33cl <span class="or">ou</span> eau 50cl</li>
+                            <li>1 pâtisserie classique <span class="or">ou</span> orientale</li>
+                        </ul>
+                    </article>
+
+                    <article class="formule-card featured">
+                        <div class="formule-header">
+                            <h4 class="formule-name">Formule Sandwich'</h4>
+                            <span class="formule-price">8€00</span>
+                        </div>
+                        <ul class="formule-items">
+                            <li>1 sandwich classique au choix</li>
+                            <li>1 boisson 33cl <span class="or">ou</span> eau 50cl</li>
+                            <li>1 pâtisserie classique <span class="or">ou</span> orientale</li>
+                        </ul>
+                        <div class="formule-badge">Complet</div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offres Spéciales -->
+    <section class="offres" id="offres">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Bons Plans</span>
+                <h2 class="section-title">Offres Spéciales</h2>
+                <p class="section-subtitle">Profitez de nos promotions exclusives</p>
+            </div>
+            <div class="offres-grid">
+                <article class="offre-card">
+                    <div class="offre-icon"><i class="fa-solid fa-bread-slice"></i></div>
+                    <h4 class="offre-title">Pack Baguettes</h4>
+                    <p class="offre-desc">3 baguettes pour <strong>2€50</strong></p>
+                    <p class="offre-desc">4 baguettes pour <strong>3€00</strong></p>
+                </article>
+
+                <article class="offre-card highlight">
+                    <div class="offre-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                    <h4 class="offre-title">Pause Café</h4>
+                    <p class="offre-desc">1 café + 1 croissant ou pain au chocolat</p>
+                    <span class="offre-price">2€00</span>
+                </article>
+
+                <article class="offre-card">
+                    <div class="offre-icon"><i class="fa-solid fa-gift"></i></div>
+                    <h4 class="offre-title">3 + 1 Offert</h4>
+                    <p class="offre-desc">3 croissants ou pains au chocolat achetés</p>
+                    <p class="offre-highlight">= 1 OFFERT !</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie Section -->
+    <section class="galerie" id="galerie">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre Univers</span>
+                <h2 class="section-title">Galerie Photos</h2>
+                <p class="section-subtitle">Découvrez notre boulangerie et nos créations</p>
+            </div>
+            <div class="galerie-grid">
+                <!-- Row 1: vitrine_2, vitrine_3, place (tall), vitrine_6 -->
+                <div class="galerie-item" id="food-photo-1">
+                    <div class="galerie-overlay">
+                        <span>Nos Créations</span>
+                    </div>
+                </div>
+                <div class="galerie-item" id="food-photo-2">
+                    <div class="galerie-overlay">
+                        <span>Nos Spécialités</span>
+                    </div>
+                </div>
+                <div class="galerie-item interior-photo" id="interior-photo">
+                    <div class="galerie-overlay">
+                        <span>Notre Intérieur</span>
+                    </div>
+                </div>
+                <div class="galerie-item" id="vitrine-photo-6">
+                    <div class="galerie-overlay">
+                        <span>Nos Délices</span>
+                    </div>
+                </div>
+                <!-- Row 2: vitrine_4 (span 2), place continues, vitrine_5 -->
+                <div class="galerie-item wide-photo" id="food-photo-3">
+                    <div class="galerie-overlay">
+                        <span>Nos Gourmandises</span>
+                    </div>
+                </div>
+                <div class="galerie-item" id="vitrine-photo-5">
+                    <div class="galerie-overlay">
+                        <span>Notre Vitrine</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avis Google Section -->
+    <section class="reviews" id="avis">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2 class="section-title">Ce que nos clients disent</h2>
+                <p class="section-subtitle">Découvrez les avis de nos clients satisfaits</p>
+            </div>
+            <div class="reviews-container">
+                <div class="google-rating">
+                    <div class="rating-badge">
+                        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="google-logo">
+                        <div class="rating-info">
+                            <div class="stars">
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                                <span class="star"><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <span class="rating-text">5.0 sur 5</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/8+Rue+Saint-Pierre+de+Vaise,+69009+Lyon" target="_blank"
+                        class="btn btn-secondary">Voir tous les avis</a>
+                </div>
+            </div>
+            <!-- Full-width infinite carousel -->
+            <div class="reviews-carousel" id="reviews-carousel">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Original cards -->
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">E</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Elmi Leghribi</span>
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Produits top au top vendeuse très sympa tous les produits faits maison
+                            sont excellents surtout les prix très raisonnable."</p>
+                    </article>
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">S</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Slim Yossra</span>
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Maison Fitouri se distingue par la qualité exceptionnelle de ses
+                            produits. Une adresse de confiance que je recommande vivement."</p>
+                    </article>
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">Z</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">ZEN</span>
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Une boulangerie au top ! Les produits sont vraiment de qualité. Maison
+                            Fitouri est devenue mon adresse incontournable !"</p>
+                    </article>
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar local-guide">E</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Estefy González <span class="local-guide-badge">Local
+                                        Guide</span></span>
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Un vrai plaisir de venir plusieurs fois par semaine pour les fricassées
+                            et chapatis !"</p>
+                    </article>
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">J</div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">J CVD</span>
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Produits de qualité et goûteux, avec un bon rapport qualité-prix.
+                            Accueil chaleureux."</p>
+                    </article>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-header left">
+                        <span class="section-tag">Nous Trouver</span>
+                        <h2 class="section-title">Rendez-nous visite</h2>
+                    </div>
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h4>Adresse</h4>
+                                <p>8 Rue Saint-Pierre de Vaise</p>
+                                <p>69009 Lyon</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">🕐</div>
+                            <div class="info-content">
+                                <h4>Horaires</h4>
+                                <p>Tous les jours</p>
+                                <p class="hours"><strong>6:00 - 21:00</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.8!2d4.8047!3d45.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb9c7e7a1a1d%3A0x1!2s8%20Rue%20Saint-Pierre%20de%20Vaise%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1704000000000!5m2!1sfr!2sfr"
+                        width="100%" height="100%" style="border:0; border-radius: 20px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-footer" id="logo-footer"></div>
+                    <p class="footer-tagline">
+                        <span class="brand-maison">Maison</span> <span class="brand-fitouri">Fitouri</span>
+                    </p>
+                    <p class="footer-desc">Boulangerie Artisanale depuis Lyon</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#formules">Nos Formules</a></li>
+                        <li><a href="#offres">Offres Spéciales</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>8 Rue Saint-Pierre de Vaise</p>
+                    <p>69009 Lyon</p>
+                    <p class="hours">6:00 - 21:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maison Fitouri. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
