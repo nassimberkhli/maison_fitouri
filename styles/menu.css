@@ -148,38 +148,54 @@
 .menu-toggle {
     position: fixed;
     top: 50%;
-    /* Reverted to center */
-    right: -10px;
-    /* Slight overlap with edge */
+    right: -25px;
     transform: translateY(-50%) rotate(90deg);
-    /* Horizontal tab */
     background: transparent;
-    /* No parent block */
     color: #8B4513;
-    /* Brown icon */
     border: none;
     padding: 0;
     cursor: pointer;
     z-index: 900;
-    /* Lower z-index (below panel 1003 and overlay 1002) */
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     filter: drop-shadow(-2px 0 2px rgba(0, 0, 0, 0.1));
-    /* Shadow on the icon shape */
+}
+
+.menu-toggle-text {
+    font-family: var(--font-heading);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    /* Outside hero: text is WHITE */
+    color: var(--color-white);
+    opacity: 0;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    z-index: 901;
+}
+
+/* In hero section: text is BLACK */
+.menu-toggle.white .menu-toggle-text {
+    color: var(--color-secondary);
 }
 
 .menu-toggle.white {
     color: var(--color-white);
-    /* White in hero section */
     filter: drop-shadow(-2px 0 2px rgba(0, 0, 0, 0.3));
-    /* Stronger shadow for white on image */
 }
 
 .menu-toggle:hover {
-    right: -5px;
-    /* Slide out slightly on hover */
-    background: transparent;
+    right: 5px;
+
     color: #A0522D;
-    padding: 0;
+}
+
+.menu-toggle:hover .menu-toggle-text {
+    opacity: 1;
 }
 
 .menu-toggle.white:hover {
@@ -187,25 +203,22 @@
 }
 
 .menu-toggle.active {
-    right: 450px;
-    /* Move with panel */
+    right: 405px;
     transform: translateY(-50%) rotate(90deg);
-    /* Keep horizontal */
     background: transparent;
     color: #8B4513;
-    /* Always brown when open */
-    margin-right: -15px;
-    /* Adjust position to stick to border */
+}
+
+.menu-toggle.active .menu-toggle-text {
+    opacity: 0;
 }
 
 .menu-toggle.white.active {
     color: var(--color-white);
-    /* Keep white if in hero */
 }
 
 .menu-toggle i {
-    font-size: 3.5rem;
-    /* Large icon */
+    font-size: 4.5rem;
     display: block;
 }
 

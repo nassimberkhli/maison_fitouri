@@ -188,49 +188,30 @@ async function initMenuPanel() {
     if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
     if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
 
-    // Menu Data (Inlined to avoid CORS issues with local files)
-    const MENU_DATA = [
-        { name: "Baguette Tradition", price_eur: 1.30, description: "Farine de blé, levain naturel, croûte croustillante." },
-        { name: "Baguette Classique", price_eur: 1.10, description: "Baguette légère, idéale pour tous les repas." },
-        { name: "Pain de Campagne", price_eur: 3.50, description: "Farines de blé et seigle, fermentation lente." },
-        { name: "Pain Complet", price_eur: 3.20, description: "Riche en fibres, goût prononcé." },
-        { name: "Pain aux Céréales", price_eur: 3.80, description: "Graines variées, texture moelleuse." },
-        { name: "Pain de Seigle", price_eur: 3.90, description: "Saveur rustique, idéal avec fromages." },
-        { name: "Ficelle", price_eur: 0.90, description: "Fine et croustillante, parfaite à partager." },
-        { name: "Croissant Pur Beurre", price_eur: 1.20, description: "Feuilletage doré, beurre AOP." },
-        { name: "Pain au Chocolat", price_eur: 1.30, description: "Chocolat fondant, pâte pur beurre." },
-        { name: "Chausson aux Pommes", price_eur: 1.60, description: "Compote de pommes maison." },
-        { name: "Pain aux Raisins", price_eur: 1.80, description: "Crème pâtissière et raisins secs." },
-        { name: "Brioche Nature", price_eur: 3.90, description: "Moelleuse et légèrement sucrée." },
-        { name: "Brioche aux Pépites de Chocolat", price_eur: 4.30, description: "Brioche gourmande au chocolat noir." },
-        { name: "Sandwich Jambon Beurre", price_eur: 4.50, description: "Jambon supérieur, beurre doux." },
-        { name: "Sandwich Poulet Crudités", price_eur: 4.90, description: "Poulet rôti, salade, tomates." },
-        { name: "Quiche Lorraine", price_eur: 3.80, description: "Lardons, œufs, crème fraîche." },
-        { name: "Pizza Tomate Fromage", price_eur: 3.50, description: "Sauce tomate, fromage fondant." },
-        { name: "Pizza Reine", price_eur: 4.20, description: "Jambon, champignons, fromage." },
-        { name: "Éclair au Chocolat", price_eur: 2.80, description: "Crème chocolat, glaçage fondant." },
-        { name: "Éclair Café", price_eur: 2.80, description: "Crème pâtissière au café." },
-        { name: "Tartelette aux Fraises", price_eur: 3.20, description: "Fraises fraîches, crème légère." },
-        { name: "Tartelette au Citron", price_eur: 3.10, description: "Crème citron acidulée." },
-        { name: "Millefeuille", price_eur: 3.50, description: "Feuilletage croustillant, crème vanille." },
-        { name: "Flan Pâtissier", price_eur: 2.90, description: "Flan onctueux à la vanille." },
-        { name: "Cookie Chocolat", price_eur: 1.80, description: "Moelleux, chocolat généreux." }
-    ];
+    // Load Menu Data from JSON
+    try {
+        const response = await fetch('./data/menu.json');
+        const data = await response.json();
+        const MENU_DATA = data.menu;
 
-    // Render Menu
-    if (MENU_DATA && Array.isArray(MENU_DATA)) {
-        menuContent.innerHTML = MENU_DATA.map(item => `
-            <div class="menu-item">
-                <div class="menu-item-header">
-                    <span class="menu-item-bullet">○</span>
-                    <span class="menu-item-name">${item.name}</span>
-                    <span class="menu-item-dots"></span>
-                    <span class="menu-item-price">${item.price_eur.toFixed(2)}€</span>
+        // Render Menu
+        if (MENU_DATA && Array.isArray(MENU_DATA)) {
+            menuContent.innerHTML = MENU_DATA.map(item => `
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <span class="menu-item-bullet">○</span>
+                        <span class="menu-item-name">${item.name}</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price">${item.price_eur.toFixed(2)}€</span>
+                    </div>
+                    <p class="menu-item-desc">${item.description}</p>
                 </div>
-                <p class="menu-item-desc">${item.description}</p>
-            </div>
-        `).join('');
-    } else {
+            `).join('');
+        } else {
+            menuContent.innerHTML = '<p style="text-align:center; color:var(--color-text-light)">Le menu est indisponible pour le moment.</p>';
+        }
+    } catch (error) {
+        console.error('Erreur lors du chargement du menu:', error);
         menuContent.innerHTML = '<p style="text-align:center; color:var(--color-text-light)">Le menu est indisponible pour le moment.</p>';
     }
 

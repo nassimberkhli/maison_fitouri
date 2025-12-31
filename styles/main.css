@@ -37,7 +37,7 @@
 
     /* Spacing - More generous */
     --space-xs: 0.5rem;
-    --space-sm: 1rem;
+    --space-sm: 1.5rem;
     --space-md: 1.5rem;
     --space-lg: 2.5rem;
     --space-xl: 4rem;
@@ -230,16 +230,20 @@ h6 {
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .nav-logo {
+    position: absolute;
+    left: var(--space-lg);
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1001;
 }
 
 .logo-placeholder {
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
     background-color: transparent;
     border-radius: var(--radius-full);
     transition: var(--transition-base);
@@ -254,6 +258,8 @@ h6 {
     cursor: pointer;
     padding: 5px;
     z-index: 1001;
+    position: absolute;
+    right: var(--space-md);
 }
 
 .nav-toggle span {
@@ -923,6 +929,7 @@ h6 {
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
+        margin-left: auto;
     }
 
     .nav-menu {
@@ -945,10 +952,19 @@ h6 {
     }
 
     /* Ensure links are white in mobile menu even when navbar is scrolled */
+    .nav-menu.active .nav-link {
+        color: var(--color-white);
+    }
+
     /* Ensure toggle icon is white when menu is open */
     .navbar .nav-toggle.active span,
     .navbar.scrolled .nav-toggle.active span {
         background-color: var(--color-white);
+    }
+
+    /* Animation burger -> croix */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
     .nav-toggle.active span:nth-child(2) {
