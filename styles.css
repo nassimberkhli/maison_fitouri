@@ -42,7 +42,7 @@
     --space-lg: 2.5rem;
     --space-xl: 4rem;
     --space-2xl: 6rem;
-    --space-3xl: 8rem;
+    --space-3xl: 4rem;
 
     /* Border Radius - Minimal for clean look */
     --radius-sm: 0;
@@ -238,8 +238,8 @@ h6 {
 }
 
 .logo-placeholder {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     background-color: transparent;
     border-radius: var(--radius-full);
     transition: var(--transition-base);
@@ -281,7 +281,25 @@ h6 {
     color: var(--color-white);
     padding: var(--space-xs) 0;
     transition: var(--transition-base);
-    border-bottom: 1px solid transparent;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    /* Uses text color (white or secondary) */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
 }
 
 .navbar.scrolled .nav-link {
@@ -713,14 +731,14 @@ h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-2xl);
-    align-items: center;
+    align-items: stretch;
 }
 
 .info-cards {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-    margin-top: var(--space-lg);
+    margin-top: 0;
 }
 
 .info-card {
@@ -756,7 +774,7 @@ h6 {
 }
 
 .contact-map {
-    height: 400px;
+    height: 100%;
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
@@ -926,13 +944,11 @@ h6 {
         right: 0;
     }
 
-    .nav-menu .nav-link {
-        color: var(--color-white);
-        font-size: 1.25rem;
-    }
-
-    .nav-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+    /* Ensure links are white in mobile menu even when navbar is scrolled */
+    /* Ensure toggle icon is white when menu is open */
+    .navbar .nav-toggle.active span,
+    .navbar.scrolled .nav-toggle.active span {
+        background-color: var(--color-white);
     }
 
     .nav-toggle.active span:nth-child(2) {
@@ -957,6 +973,7 @@ h6 {
 
     .contact-map {
         height: 300px;
+        margin-top: var(--space-lg);
     }
 
     .galerie-grid {
@@ -1007,7 +1024,7 @@ h6 {
 
 /* === Reviews Section === */
 .reviews {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-xl) 0;
     background: var(--color-bg-alt);
 }
 

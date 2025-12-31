@@ -20,6 +20,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu_styles.css">
 </head>
 
 <body>
@@ -331,12 +332,12 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
+            <div class="section-header left">
+                <span class="section-tag">Nous Trouver</span>
+                <h2 class="section-title">Rendez-nous visite</h2>
+            </div>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="section-header left">
-                        <span class="section-tag">Nous Trouver</span>
-                        <h2 class="section-title">Rendez-nous visite</h2>
-                    </div>
                     <div class="info-cards">
                         <div class="info-card">
                             <div class="info-icon">📍</div>
@@ -366,6 +367,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Menu Panel -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <div class="menu-panel" id="menu-panel">
+        <button class="close-menu" id="close-menu" aria-label="Fermer le menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="menu-header">
+            <h2 class="menu-title">Notre Carte</h2>
+            <p class="menu-subtitle">Fait maison avec amour</p>
+        </div>
+        <div class="menu-content" id="menu-content">
+            <!-- Menu items will be injected here via JS -->
+        </div>
+    </div>
+
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Voir la carte">
+        <i class="fa-solid fa-bookmark"></i>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">

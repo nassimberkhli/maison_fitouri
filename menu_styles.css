@@ -1,0 +1,219 @@
+/* === Sliding Menu Panel === */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1002;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    background: var(--color-white);
+    z-index: 1003;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-panel.active {
+    right: 0;
+}
+
+.menu-header {
+    padding: var(--space-xl) var(--space-lg) var(--space-lg);
+    text-align: center;
+    background: var(--color-cream);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.menu-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.menu-subtitle {
+    font-family: var(--font-ui);
+    font-style: italic;
+    color: var(--color-text-light);
+}
+
+.close-menu {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-base);
+}
+
+/* Close Button - No Rotate */
+.close-menu:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: none;
+    /* Remove rotation */
+}
+
+.menu-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-lg);
+}
+
+/* Menu Items - Bakery Style */
+.menu-item {
+    margin-bottom: var(--space-lg);
+}
+
+.menu-item-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: var(--space-xs);
+}
+
+.menu-item-name {
+    font-family: 'Playfair Display', serif;
+    /* Bakery font */
+    font-size: 1.125rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.menu-item-bullet {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    margin-right: var(--space-xs);
+    position: relative;
+    top: -1px;
+}
+
+.menu-item-dots {
+    flex: 1;
+    border-bottom: 2px dotted #000;
+    /* Black dots */
+    margin: 0 var(--space-xs) 0 2px;
+    /* Tiny gap to avoid visual clash, effectively glued */
+    position: relative;
+    top: 0;
+    /* Align to baseline */
+    opacity: 0.8;
+    /* Slightly more visible */
+}
+
+.menu-item-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.menu-item-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    font-style: normal;
+    line-height: 1.4;
+    margin-left: 1.5rem;
+    /* Indent description */
+    margin-top: 4px;
+}
+
+/* Toggle Button - Bookmark Style */
+.menu-toggle {
+    position: fixed;
+    top: 50%;
+    /* Reverted to center */
+    right: -10px;
+    /* Slight overlap with edge */
+    transform: translateY(-50%) rotate(90deg);
+    /* Horizontal tab */
+    background: transparent;
+    /* No parent block */
+    color: #8B4513;
+    /* Brown icon */
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 900;
+    /* Lower z-index (below panel 1003 and overlay 1002) */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(-2px 0 2px rgba(0, 0, 0, 0.1));
+    /* Shadow on the icon shape */
+}
+
+.menu-toggle.white {
+    color: var(--color-white);
+    /* White in hero section */
+    filter: drop-shadow(-2px 0 2px rgba(0, 0, 0, 0.3));
+    /* Stronger shadow for white on image */
+}
+
+.menu-toggle:hover {
+    right: -5px;
+    /* Slide out slightly on hover */
+    background: transparent;
+    color: #A0522D;
+    padding: 0;
+}
+
+.menu-toggle.white:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-toggle.active {
+    right: 450px;
+    /* Move with panel */
+    transform: translateY(-50%) rotate(90deg);
+    /* Keep horizontal */
+    background: transparent;
+    color: #8B4513;
+    /* Always brown when open */
+    margin-right: -15px;
+    /* Adjust position to stick to border */
+}
+
+.menu-toggle.white.active {
+    color: var(--color-white);
+    /* Keep white if in hero */
+}
+
+.menu-toggle i {
+    font-size: 3.5rem;
+    /* Large icon */
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .menu-toggle.active {
+        right: 100%;
+        /* Move fully left on mobile */
+        opacity: 0;
+        /* Hide on mobile when open as it might overlap content */
+    }
+}

@@ -1,0 +1,129 @@
+{
+    "menu": [
+        {
+            "name": "Baguette Tradition",
+            "price_eur": 1.30,
+            "description": "Farine de blé, levain naturel, croûte croustillante."
+        },
+        {
+            "name": "Baguette Classique",
+            "price_eur": 1.10,
+            "description": "Baguette légère, idéale pour tous les repas."
+        },
+        {
+            "name": "Pain de Campagne",
+            "price_eur": 3.50,
+            "description": "Farines de blé et seigle, fermentation lente."
+        },
+        {
+            "name": "Pain Complet",
+            "price_eur": 3.20,
+            "description": "Riche en fibres, goût prononcé."
+        },
+        {
+            "name": "Pain aux Céréales",
+            "price_eur": 3.80,
+            "description": "Graines variées, texture moelleuse."
+        },
+        {
+            "name": "Pain de Seigle",
+            "price_eur": 3.90,
+            "description": "Saveur rustique, idéal avec fromages."
+        },
+        {
+            "name": "Ficelle",
+            "price_eur": 0.90,
+            "description": "Fine et croustillante, parfaite à partager."
+        },
+        {
+            "name": "Croissant Pur Beurre",
+            "price_eur": 1.20,
+            "description": "Feuilletage doré, beurre AOP."
+        },
+        {
+            "name": "Pain au Chocolat",
+            "price_eur": 1.30,
+            "description": "Chocolat fondant, pâte pur beurre."
+        },
+        {
+            "name": "Chausson aux Pommes",
+            "price_eur": 1.60,
+            "description": "Compote de pommes maison."
+        },
+        {
+            "name": "Pain aux Raisins",
+            "price_eur": 1.80,
+            "description": "Crème pâtissière et raisins secs."
+        },
+        {
+            "name": "Brioche Nature",
+            "price_eur": 3.90,
+            "description": "Moelleuse et légèrement sucrée."
+        },
+        {
+            "name": "Brioche aux Pépites de Chocolat",
+            "price_eur": 4.30,
+            "description": "Brioche gourmande au chocolat noir."
+        },
+        {
+            "name": "Sandwich Jambon Beurre",
+            "price_eur": 4.50,
+            "description": "Jambon supérieur, beurre doux."
+        },
+        {
+            "name": "Sandwich Poulet Crudités",
+            "price_eur": 4.90,
+            "description": "Poulet rôti, salade, tomates."
+        },
+        {
+            "name": "Quiche Lorraine",
+            "price_eur": 3.80,
+            "description": "Lardons, œufs, crème fraîche."
+        },
+        {
+            "name": "Pizza Tomate Fromage",
+            "price_eur": 3.50,
+            "description": "Sauce tomate, fromage fondant."
+        },
+        {
+            "name": "Pizza Reine",
+            "price_eur": 4.20,
+            "description": "Jambon, champignons, fromage."
+        },
+        {
+            "name": "Éclair au Chocolat",
+            "price_eur": 2.80,
+            "description": "Crème chocolat, glaçage fondant."
+        },
+        {
+            "name": "Éclair Café",
+            "price_eur": 2.80,
+            "description": "Crème pâtissière au café."
+        },
+        {
+            "name": "Tartelette aux Fraises",
+            "price_eur": 3.20,
+            "description": "Fraises fraîches, crème légère."
+        },
+        {
+            "name": "Tartelette au Citron",
+            "price_eur": 3.10,
+            "description": "Crème citron acidulée."
+        },
+        {
+            "name": "Millefeuille",
+            "price_eur": 3.50,
+            "description": "Feuilletage croustillant, crème vanille."
+        },
+        {
+            "name": "Flan Pâtissier",
+            "price_eur": 2.90,
+            "description": "Flan onctueux à la vanille."
+        },
+        {
+            "name": "Cookie Chocolat",
+            "price_eur": 1.80,
+            "description": "Moelleux, chocolat généreux."
+        }
+    ]
+}
