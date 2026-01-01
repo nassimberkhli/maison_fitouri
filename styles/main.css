@@ -926,10 +926,49 @@ h6 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+    .nav-link {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        padding: 0;
+    }
+
+    .nav-menu {
+        gap: var(--space-md);
+    }
+
+    /* Disable underline on tablet/mobile */
+    .nav-link::after {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-container {
+        justify-content: space-between;
+        padding: 0 var(--space-md);
+    }
+
     .nav-toggle {
         display: flex;
-        margin-left: auto;
+        margin-left: 0;
+        /* Reset auto margin since we use space-between */
+    }
+
+    .nav-logo {
+        position: static;
+        transform: none;
+        margin: 0;
+    }
+
+    /* Reduce navbar height on mobile */
+    .navbar {
+        padding: 5px 0;
+    }
+
+    .logo-placeholder {
+        width: 70px;
+        height: 70px;
     }
 
     .nav-menu {
@@ -1011,6 +1050,11 @@ h6 {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .logo-footer {
+        margin: 0 auto var(--space-sm);
+        /* Center logo */
     }
 }
 

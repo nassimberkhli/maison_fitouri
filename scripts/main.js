@@ -252,7 +252,7 @@ function initEventListeners() {
 
     // Close menu on resize
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 700) {
             closeMobileMenu();
         }
     });

@@ -222,6 +222,22 @@
     display: block;
 }
 
+@media (max-width: 1000px) {
+    .menu-toggle i {
+        font-size: 3.5rem;
+        /* Smaller icon */
+    }
+
+    .menu-toggle {
+        right: -20px;
+        /* Adjust overlap */
+    }
+
+    .menu-toggle:hover {
+        right: -5px;
+    }
+}
+
 @media (max-width: 480px) {
     .menu-toggle.active {
         right: 100%;
